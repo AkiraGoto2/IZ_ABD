@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <main>
+    <header>
+
+      <div class="navbar">
+  
+      <div class="site-title">ДИПЛОМНОГО ПРОЕКТИРОВАНИЯ</div>
+  
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="authorization.html">Авторизация</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+  
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  
+      </div>
+  
+      <div class="mobile-menu" id="mobileMenu">
+  
+        <a href="index.html">Главная</a>
+        <a href="authorization.html">Авторизация</a>
+        <a href="contact.html">Контакты</a>
+  
+      </div>
+  
+    </header>
+
+    <h2>Студент</h2>
+    <section class="profile">
+      <img src="img/image (1).svg" alt="Аватар студента" class="avatar"/>
+      <h2>Анна Иванова</h2>
+      <p><strong>Направление:</strong> Программная инженерия</p>
+      <p><strong>Тема диплома:</strong> <span id="thesis-title">Не выбрана</span></p>
+      <p><strong>Руководитель:</strong> Петров С.С.</p>
+
+      <label for="thesis-select"><strong>Выбор темы диплома:</strong></label>
+      <select id="thesis-select">
+        <option value="">-- Выберите тему --</option>
+        <option value="AI-система для анализа речи">AI-система для анализа речи</option>
+        <option value="Мобильное приложение для учёта питания">Мобильное приложение для учёта питания</option>
+        <option value="Визуализация данных в 3D">Визуализация данных в 3D</option>
+      </select>
+      <button onclick="setThesis()">Сохранить тему</button>
+    </section>
+
+    <section class="section">
+      <h2>Статус диплома</h2>
+      <form id="status-form">
+        <label for="file-upload">Прикрепите файл:</label>
+        <input type="file" id="file-upload" required />
+        
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" rows="3" placeholder="Введите комментарий..." required></textarea>
+        
+        <button type="submit">Отправить</button>
+      </form>
+
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Файл</th>
+            <th>Комментарий</th>
+            <th>Время отправки</th>
+            <th>Статус</th>
+            <th>Комментарий преподавателя</th>
+          </tr>
+        </thead>
+        <tbody id="status-body">
+          <tr>
+            <td>Диплом_Анна_Иванова.rar</td>
+            <td>Черновик</td>
+            <td>21.04.2025, 11:40:10</td>
+            <td><span class="status-label">Проверен</span></td>
+            <td><i>Испавить титульный лист, добавить список и содержание</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function setThesis() {
+      const select = document.getElementById("thesis-select");
+      const titleSpan = document.getElementById("thesis-title");
+      if (select.value) {
+        titleSpan.textContent = select.value;
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

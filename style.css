@@ -1,0 +1,580 @@
+body {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+.sin {
+  color: #5982A5;
+}
+
+.cra {
+  color: #6B4718;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 16px;
+  text-align: left;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e67e22;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+#newsForm {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #eaf3ff;
+  border-radius: 12px;
+  max-width: 95%;
+}
+
+#newsForm input,
+#newsForm textarea,
+#newsForm button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.news-item {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  background-color: #fff9f0;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.news-item img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.news-actions {
+  margin-top: 8px;
+}
+
+.news-actions button {
+  margin-right: 8px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 350px;
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .nav-links {
+      display: none;
+  }
+
+  .mobile-menu {
+      display: none;
+  }
+
+  .mobile-menu.show {
+      display: flex;
+  }
+}
+
+.title-top {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+h1 {
+  color: #e67e22;
+  font-size: 20px;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.intro p {
+  padding: 0 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.important-box {
+  background-color: #FFCA82;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.role-selection {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.roles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.selected-role {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+button {
+  background-color: #3e8bd8;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fdb954;
+  padding: 10px 40px 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.news {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.news-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.more-btn {
+  background-color: #fdb954;
+  color: #333;
+  margin-top: 10px;
+}
+
+.role-selection {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.roles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.role {
+  padding: 10px 20px;
+  border: 2px solid #e67e22;
+  border-radius: 20px;
+  background-color: white;
+  color: #e67e22;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.role:hover {
+  background-color: #ffe0b3;
+}
+
+.role.active {
+  background-color: #e67e22;
+  color: white;
+}
+
+.continue-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  background-color: #7fbfff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+  background-color: #5fa4e8;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff3e0;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #e9f3ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.status-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-table {
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.status-table th,
+.status-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+textarea {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.status-label {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.teacher-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.teacher-info {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.thesis-table th,
+.thesis-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.thesis-table th {
+  background-color: #f2f2f2;
+}
+
+.thesis-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.thesis-table td {
+  background-color: #fff;
+}
+
+.status-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.status-table th,
+.status-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.status-table th {
+  background-color: #f2f2f2;
+}
+
+.status-table td {
+  background-color: #fff;
+}
+
+.status-section form textarea {
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.status-section button {
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.status-section button:hover {
+  background-color: #f39c12;
+}
+
+.status-label.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-label.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-label.on-check {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-table .change-status {
+  background-color: #3e8bd8;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.status-table .change-status:hover {
+  background-color: #3498db;
+}
+
+
+@media screen and (max-width: 390px) and (min-width: 300px) {
+  body {
+      padding: 0 10px;
+      font-size: 14px;
+  }
+
+  main,
+  header,
+  .news {
+      max-width: 100%;
+      padding: 10px 0;
+      margin: 0 auto;
+  }
+
+  h1 {
+      font-size: 18px;
+  }
+
+  .menu-icon {
+      font-size: 22px;
+      top: 15px;
+      right: 15px;
+  }
+
+  .title-top {
+      font-size: 11px;
+  }
+
+  .illustration {
+      max-width: 260px;
+      margin: 15px auto;
+  }
+
+  .intro p {
+      padding: 0 10px;
+      font-size: 13px;
+  }
+
+  .important-box {
+      font-size: 13px;
+      margin: 15px 10px;
+      padding: 8px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  .roles {
+      font-size: 18px;
+      gap: 16px;
+  }
+
+  .selected-role {
+      font-size: 18px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 18px;
+  }
+
+  .news {
+      padding: 10px;
+  }
+
+  .news-card {
+      padding: 12px;
+  }
+
+  .news-text {
+      font-size: 13px;
+  }
+
+  .more-btn {
+      font-size: 13px;
+      padding: 6px 10px;
+  }
+}

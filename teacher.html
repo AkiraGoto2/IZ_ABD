@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <title>Страница преподавателя</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+
+    <div class="navbar">
+
+    <div class="site-title">ДИПЛОМНОГО ПРОЕКТИРОВАНИЯ</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="authorization.html">Авторизация</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+      <a href="index.html">Главная</a>
+      <a href="authorization.html">Авторизация</a>
+      <a href="contact.html">Контакты</a>
+
+    </div>
+
+  </header>
+  
+  <main>
+
+    <h2>Преподователь</h2>
+      <div class="profile">
+        <img src="img/1_1.jpg" alt="Аватар преподавателя" class="avatar" />
+        <h3>Светлана Сергеевна</h3>
+        <p>Должность: Доцент КМиИ</p>
+        <p>Кафедра: Математики и информатики</p>
+      </div>
+
+
+<section class="section">
+
+      <h3>Статусы работ студентов</h3>
+
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Файл</th>
+            <th>Комментарий</th>
+            <th>Время отправки</th>
+            <th>Статус</th>
+            <th>Комментарий преподавателя</th>
+          </tr>
+        </thead>
+        <tbody id="status-body">
+
+
+          <tr>
+            <td>Диплом.АннаИванова.rar</td>
+            <td>Черновик</td>
+            <td>16.04.2025, 11:40:10</td>
+            <td>
+              <select id="thesis-select">
+                <option value="" class="status-label">Проверен</option>
+                <option value="Потвержден">Не проверен</option>
+                <option value="На исправление">На исправление</option>
+              </select>
+            </td>
+            <td><i>Испавить титульный лист, добавить список и содержание</i></td>
+          </tr>
+
+          <tr>
+            <td>Диплом.АлинаПетрова.rar</td>
+            <td>Готовый проект, исправлено то то то</td>
+            <td>24.04.2025, 19:40:10</td>
+            <td>
+              <select id="thesis-select">
+                <option value="" class="status-label">Не проверен</option>
+                <option value="Потвержден">Проверен</option>
+                <option value="На исправление">На исправление</option>
+              </select>
+            </td>
+            <td><textarea id="comment" rows="3" placeholder="Введите комментарий..." style="width: 117px; height: 32px;" required></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit">Отправить</button>
+    </section>
+
+    <section class="section">
+      <h3>Список студентов и тем дипломов</h3>
+
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>Студент</th>
+          <th>Тема</th>
+          <th>Статус</th>
+          <th>Оценка</th>
+        </tr>
+      </thead>
+      <tbody id="status-body">
+
+
+        <tr>
+          <td>Анна Иванова</td>
+          <td>AI-система для анализа речи</td>
+          <td>
+            <select id="thesis-select">
+            <option value="" class="status-label">На утверждении</option>
+            <option value="В процессе">В процессе</option>
+            <option value="сдано">Сдано</option></td>
+          </select>
+          <td>
+            <select id="thesis-select">
+              <option value="" class="status-label">--</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Диплом_Алина_Мурашкина.rar</td>
+          <td>Мобильное приложение для учёта питания</td>
+          <td>
+            <select id="thesis-select">
+            <option value="" class="status-label">На утверждении</option>
+              <option value="В процессе">В процессе</option>
+              <option value="сдано">Сдано</option>
+            </select>
+          </td>
+          <td>
+            <select id="thesis-select">
+              <option value="" class="status-label">--</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit">Отправить</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
